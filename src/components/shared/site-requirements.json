@@ -21,6 +21,21 @@
     "link": {
       "type": "string",
       "required": true
+    },
+    "newTab": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "redirect"
+          ]
+        }
+      },
+      "required": true,
+      "default": false
     }
   },
   "config": {}

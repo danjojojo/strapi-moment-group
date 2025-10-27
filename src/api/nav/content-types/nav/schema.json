@@ -41,6 +41,21 @@
     },
     "sortOrder": {
       "type": "integer"
+    },
+    "newTab": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "redirect"
+          ]
+        }
+      },
+      "required": true,
+      "default": false
     }
   }
 }

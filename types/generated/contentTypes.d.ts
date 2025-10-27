@@ -489,6 +489,9 @@ export interface ApiNavNav extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     nameDesktop: Schema.Attribute.String & Schema.Attribute.Required;
     nameMobile: Schema.Attribute.String & Schema.Attribute.Required;
+    newTab: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     publishedAt: Schema.Attribute.DateTime;
     sortOrder: Schema.Attribute.Integer;
     type: Schema.Attribute.Enumeration<['redirect', 'page']> &
