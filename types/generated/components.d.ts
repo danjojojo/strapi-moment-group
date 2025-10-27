@@ -118,6 +118,9 @@ export interface SharedSiteRequirements extends Struct.ComponentSchema {
   attributes: {
     link: Schema.Attribute.String & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
+    newTab: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     type: Schema.Attribute.Enumeration<['page', 'redirect']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'page'>;
